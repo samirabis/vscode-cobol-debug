@@ -7,13 +7,13 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
     vscode.debug.registerDebugConfigurationProvider('cobol', provider)
   );
-
   // Register a command that starts a new debug session
   context.subscriptions.push(
     vscode.commands.registerCommand(
       'extension.cobol.debug.startSession',
-      (config) => {
-        return vscode.debug.startDebugging(undefined, config);
+      async (config) => {
+        await vscode.debug.startDebugging(undefined, config);
+        COBOLDebugSession.run(COBOLDebugSession);
       }
     )
   );
