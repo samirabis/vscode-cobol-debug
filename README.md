@@ -1,71 +1,44 @@
-# vscode-cobol-debug README
+# COBOL Debugging Extension for Visual Studio Code
 
-This is the README for your extension "vscode-cobol-debug". After writing up a brief description, we recommend including the following sections.
+This extension provides support for debugging COBOL programs in Visual Studio Code.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Setting and hitting breakpoints
+- Stepping through code (step in, step over, step out)
+- Viewing variables and scopes
+- Continuing execution after hitting a breakpoint
 
-For example if there is an image subfolder under your extension project workspace:
+## Getting Started
 
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+1. Install the extension in Visual Studio Code.
+2. Open a COBOL file that you want to debug.
+3. Set breakpoints by clicking the gutter next to the line numbers, or by pressing `F9` on the line you want to break on.
+4. Press `F5` to start debugging.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+To use this extension, you'll need to have the following installed:
 
-## Extension Settings
+- GNU COBOL compiler
+- GNU Debugger (GDB)
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+The extension assumes that `cobc` (the COBOL compiler) and `gdb` (the debugger) are in your system's PATH.
 
-For example:
+## Configuration
 
-This extension contributes the following settings:
+The extension provides the following configuration options:
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+- `program`: The path to the COBOL program to debug. You can use `${file}` to refer to the currently active file in Visual Studio Code.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- The extension is currently not supporting multi-threaded COBOL programs.
 
-## Release Notes
+## Contributing
 
-Users appreciate release notes as you update your extension.
+Contributions are welcome! Please create an issue or open a pull request with your changes.
 
-### 1.0.0
+## License
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+This extension is licensed under the [MIT License](LICENSE.txt).
